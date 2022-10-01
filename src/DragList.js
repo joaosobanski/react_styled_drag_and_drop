@@ -38,7 +38,7 @@ const addToList = (list, index, element) => {
   return result;
 };
 
-const lists = ["todo", "inProgress", "done", "stop"];
+const lists = ["todo", "inProgress", "done"];
 
 const generateLists = () =>
   lists.reduce(

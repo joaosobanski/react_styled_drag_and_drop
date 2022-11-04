@@ -18,7 +18,7 @@ const ListGrid = styled.div`
 // fake data generator
 const getItems = (count, prefix) =>
   Array.from({ length: count }, (v, k) => k).map((k) => {
-    const randomId = Math.floor(Math.random() * 1000);
+    const randomId = Math.floor(Math.random() * 10);
     return {
       id: `item-${randomId}`,
       prefix,
@@ -51,6 +51,7 @@ function DragList() {
 
   useEffect(() => {
     setElements(generateLists());
+    console.log(JSON.stringify(generateLists()))
   }, []);
 
   const onDragEnd = (result) => {
@@ -74,7 +75,7 @@ function DragList() {
 
     setElements(listCopy);
   };
-
+  console.log(lists)
   return (
     <DragDropContextContainer>
       <DragDropContext onDragEnd={onDragEnd}>

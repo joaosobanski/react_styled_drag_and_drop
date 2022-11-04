@@ -1,5 +1,4 @@
 import { Draggable } from "react-beautiful-dnd";
-import { LoremIpsum } from "lorem-ipsum";
 import { generateFromString } from "generate-avatar";
 import React, { useMemo } from "react";
 import styled, { css } from "styled-components";
@@ -37,10 +36,9 @@ const DragItem = styled.div`
   flex-direction: column;
 `;
 
-const lorem = new LoremIpsum();
 
 const ListItem = ({ item, index }) => {
-  const randomHeader = useMemo(() => lorem.generateWords(5), []);
+  const randomHeader = useMemo(() => ['1', '2', '3']);
 
   return (
     <Draggable draggableId={item.id} index={index}>
